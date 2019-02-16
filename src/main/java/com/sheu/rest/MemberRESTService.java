@@ -34,7 +34,10 @@ public class MemberRESTService {
     }
     @GET
     @Path("list/loyalty/cards")
-    public ListLoyaltyCardsResponse listLoyaltyCards(final ListLoyaltyCardsRequest request) {
+
+    @Produces(MediaType.APPLICATION_JSON)
+    public ListLoyaltyCardsResponse listLoyaltyCards() {
+        final ListLoyaltyCardsRequest request = null;
         return memberService.listLoyaltyCards(request);
     }
 
