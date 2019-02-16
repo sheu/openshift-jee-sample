@@ -21,7 +21,6 @@ public class MemberRESTService {
     }
     @POST
     @Path("/add/payment/card")
-    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public AddPaymentCardResponse addPaymentCard(final AddPaymentCardRequest request) {
         return memberService.addPaymentCard(request);
